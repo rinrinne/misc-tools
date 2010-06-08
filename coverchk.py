@@ -9,6 +9,8 @@ if __name__ == '__main__':
 	for root, dirs, files in os.walk("."):
 		if "Image.cue" in files:
 			cnt+=1
+			if "noimage" in files:
+				continue
 			if not "cover.jpg" in files:
 				print "cover not found: %s" % root
 	
